@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <img
               src="/preview.png"
-              alt="Jahnavi Sambaraju Logo"
+              alt="Ashrith Sambaraju Logo"
               className="h-16 w-auto object-contain"
             />
           </div>

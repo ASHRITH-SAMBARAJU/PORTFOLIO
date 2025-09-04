@@ -1,55 +1,50 @@
-import { Code, Database, MonitorSmartphone, Smile, Layers, Cloud, Shield, Terminal } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  Layers,           // AIML
+  Code,             // Programming
+  Database,         // DB
+  MonitorSmartphone,// IDEs & Tools
+  LayoutGrid,       // Frontend
+  Smile,            // Soft Skills
+} from "lucide-react";
 
+// Exactly like your screenshot
 const skillCategories = [
   {
-    title: "Programming & Scripting",
-    skills: ["C", "Python", "R", "HTML", "CSS", "JavaScript", "SQL", "PowerShell", "Bash"],
-    icon: Code,
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    title: "Cloud Platforms & Infrastructure",
-    skills: [
-      "Azure (AD, VMs, LoadBalancer, VNet)",
-      "AWS (EC2, S3, Lambda)",
-      "VMware (vSphere, ESXi, vCenter)",
-      ,
-    ],
-    icon: Cloud,
-    color: "from-indigo-500 to-blue-700",
-  },
-  {
-    title: "Operating Systems",
-    skills: ["Linux", "Windows"],
-    icon: Terminal,
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    title: "AI & ML",
-    skills: [
-      "Decision Tree",
-      "Random Forest",
-      "Confusion Matrix",
-      "Kappa Statistic",
-      "ANN",
-      "TensorFlow",
-      "Keras",
-    ],
+    title: "AIML Frameworks & Libraries",
+    skills: ["NumPy", "Pandas", "Matplotlib", "OpenCV"],
     icon: Layers,
-    color: "from-yellow-500 to-orange-500",
+    color: "from-amber-500 to-orange-600",
   },
   {
-    title: "Methodologies",
-    skills: ["SDLC", "CI/CD", "Agile Methodologies", "ITIL Framework"],
-    icon: Smile,
-    color: "from-gray-500 to-gray-800",
+    title: "Programming Languages",
+    skills: ["C", "Python", "R"],
+    icon: Code,
+    color: "from-sky-500 to-cyan-500",
+  },
+  {
+    title: "Database & Data Storage",
+    skills: ["MySQL", "MongoDB"],
+    icon: Database,
+    color: "from-fuchsia-500 to-purple-600",
   },
   {
     title: "IDEs & Tools",
-    skills: ["R Studio", "Visual Studio Code"],
+    skills: ["Visual Studio", "Jupyter", "Google Colab"],
     icon: MonitorSmartphone,
-    color: "from-teal-500 to-green-600",
+    color: "from-emerald-500 to-teal-600",
+  },
+  {
+    title: "Frontend Development",
+    skills: ["HTML", "CSS", "React", "Bootstrap"],
+    icon: LayoutGrid,
+    color: "from-rose-500 to-pink-600",
+  },
+  {
+    title: "Soft Skills",
+    skills: ["Communication", "Networking", "Problem Solving", "Task Management"],
+    icon: Smile,
+    color: "from-slate-500 to-slate-700",
   },
 ];
 
@@ -58,10 +53,7 @@ const cardVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-    },
+    transition: { delay: i * 0.12, duration: 0.5 },
   }),
 };
 
@@ -70,45 +62,45 @@ const SkillsSection = () => {
     <section className="py-28 bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-            Technical Skills
-          </h2>
-          <div className="h-1 w-24 bg-white mx-auto rounded-full mb-6" />
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            A showcase of my technical expertise and practical toolset.
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold tracking-tight">Technical Skills</h2>
+          <div className="h-1 w-24 bg-white mx-auto rounded-full my-4" />
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            A showcase of my technical foundations and practical toolset.
           </p>
         </div>
 
-        {/* Skill Cards */}
+        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {skillCategories.map((category, index) => (
             <motion.div
-              key={index}
+              key={category.title}
               custom={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               variants={cardVariants}
-              className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group"
+              className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300"
             >
+              {/* Icon + Title */}
               <div className="flex flex-col items-center text-center">
                 <div
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-md`}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mb-6 shadow-md`}
                 >
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
+                <h3 className="text-2xl font-bold text-white">{category.title}</h3>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-3 mt-4">
-                {category.skills.map((skill, i) => (
-                  <div
-                    key={i}
-                    className="bg-white text-black text-sm px-4 py-1.5 rounded-full font-medium shadow hover:bg-gray-100 transition-all duration-300"
+              {/* Chips */}
+              <div className="flex flex-wrap justify-center gap-3 mt-8">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-white text-black text-sm px-4 py-1.5 rounded-full font-medium shadow hover:bg-gray-100 transition"
                   >
                     {skill}
-                  </div>
+                  </span>
                 ))}
               </div>
             </motion.div>

@@ -2,14 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Download, FileText, Award, User } from "lucide-react";
 
 const ResumeSection = () => {
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    // Public/ folder files are served from the root—spaces URL-encoded
-    link.href = "/Sambaraju%20Jahnavi.pdf"; 
-    link.download = "Sambaraju_Jahnavi_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  // Encode spaces in the file name
+  const RESUME_URL = encodeURI(`${import.meta.env.BASE_URL}ASHRITH SAMBARAJU.pdf`);
+
+  const handleDownloadResume = async () => {
+    try {
+      const res = await fetch(RESUME_URL);
+      if (!res.ok) {
+        alert("Could not fetch the PDF. Check the file name/path in /public.");
+        return;
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Sambaraju_Ashrith_Resume.pdf"; // clean filename for user
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error(err);
+      alert("Error downloading the PDF.");
+    }
   };
 
   return (
@@ -25,7 +40,7 @@ const ResumeSection = () => {
 
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Complete Professional Profile</h3>
           <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed px-2">
-            Download my comprehensive resume to explore my complete background, education, 
+            Download my comprehensive resume to explore my complete background, education,
             detailed project descriptions, and professional achievements.
           </p>
 

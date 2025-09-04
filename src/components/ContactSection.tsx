@@ -104,11 +104,11 @@ const ContactSection = () => {
             <div className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/10 space-y-6">
               <h3 className="text-2xl font-bold">Get in Touch</h3>
 
-              {[ 
+              {[
                 {
                   icon: <Mail className="w-6 h-6 text-white" />,
                   label: "Email",
-                  value: "jahnaviirao@gmail.com",
+                  value: "ashrithsambaraju@gmail.com",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-white" />,
@@ -137,7 +137,7 @@ const ContactSection = () => {
               <h3 className="text-xl font-bold mb-4">Find Me Online</h3>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://github.com/Jahnavi-1999"
+                  href="https://github.com/ASHRITH-SAMBARAJU"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="GitHub"
@@ -146,7 +146,7 @@ const ContactSection = () => {
                   <Github className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/jahnavi-sambaraju"
+                  href="https://www.linkedin.com/in/ashrith-sambaraju"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="LinkedIn"
@@ -155,8 +155,8 @@ const ContactSection = () => {
                   <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </a>
                 <a
-                  href="mailto:jahnaviirao@gmail.com"
-                  title="Gmail"
+                  href="mailto:ashrithsambaraju@gmail.com"
+                  title="Email"
                   className="w-12 h-12 sm:w-14 sm:h-14 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
                 >
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -168,7 +168,7 @@ const ContactSection = () => {
 
         {/* Copyright */}
         <p className="text-center text-gray-400 mt-16 text-sm">
-          © {new Date().getFullYear()} Jahnavi Sambaraju. All rights reserved.
+          © {new Date().getFullYear()} Ashrith Sambaraju. All rights reserved.
         </p>
       </div>
     </section>

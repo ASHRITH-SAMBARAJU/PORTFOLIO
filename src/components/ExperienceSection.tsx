@@ -1,47 +1,43 @@
 import { motion } from "framer-motion";
 
-const internships = [
+const experiences = [
   {
-    company: "Bharat Dynamics Limited (BDL)",
-    role: "Application Developer Intern",
-    location: "India",
-    duration: "2019",
-    logo: "/logos/bdl.png", // Place logo in public/logos
-    achievements: [
-    "Simplified public access to government scheme information, reducing manual work and increasing usability.",
-    "Developed a system enabling users and faculty to effortlessly view their profiles and access relevant information.",
-    "Implemented profile-based access so individuals can easily retrieve their own details when needed.",
-    "Streamlined the process for confused or first-time users, ensuring they could readily benefit from the system without manual intervention."
-  ],
-
+    company: "NextGen Edunet Foundation X EY",
+    role: "MERN Stack Intern",
+    duration: "March 2025 - April 2025",
+    logo: "/logos/ey_logo.png",
+    contributions: [
+      "Built a dynamic e-commerce web application using the MERN stack",
+      "Implemented user authentication and efficient product management",
+      "Focused on delivering a seamless and responsive user experience",
+    ],
   },
   {
-    company: "Electronics Corporation of India Limited (ECIL)",
-    role: "Application Developer Intern",
-    location: "India",
-    duration: "2019",
-    logo: "/logos/ecil.png", // Place logo in public/logos
-    achievements: [
-      "Built a travel bill tracking system with receipt capture and offline access, enabling reliability in low-connectivity environments.",
-      "Conducted comprehensive testing and validation to ensure functionality and reduce bugs in deployment.",
-      "Designed a modular database schema to support multiple user roles and permission levels, improving security and maintainability.",
+    company: "International Institute of Information Technology (IIIT-H) X Swecha",
+    role: "AI Developer Intern",
+    duration: "May 2024 - June 2024",
+    logo: "/logos/swecha_logo.png",
+    contributions: [
+      "Participated in a 5-day workshop at IIIT-Hyderabad as part of the internship program",
+      "Developed AI-driven solutions for cultural preservation",
+      "Explored deep learning and generative AI with transformer models",
     ],
   },
 ];
 
-const InternshipSection = () => {
+const ExperienceSection = () => {
   return (
     <section className="py-28 bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold">Internships</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">Experience</h2>
           <div className="h-1 w-28 bg-white mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Internship Cards */}
+        {/* Experience Cards */}
         <div className="space-y-12">
-          {internships.map((intern, index) => (
+          {experiences.map((exp, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -52,29 +48,28 @@ const InternshipSection = () => {
             >
               {/* Logo & Company Info */}
               <div className="flex items-center mb-6">
-                {intern.logo && (
+                {exp.logo && (
                   <img
-                    src={intern.logo}
-                    alt={`${intern.company} logo`}
+                    src={exp.logo}
+                    alt={`${exp.company} logo`}
                     className="w-14 h-14 object-contain rounded-lg mr-4"
                   />
                 )}
                 <div>
-                  <h3 className="text-2xl font-bold text-white">{intern.company}</h3>
-                  <p className="text-lg text-gray-300 italic">{intern.role}</p>
+                  <h3 className="text-2xl font-bold text-white">{exp.company}</h3>
+                  <p className="text-lg text-gray-300 italic">{exp.role}</p>
                 </div>
               </div>
 
-              {/* Location & Duration */}
+              {/* Duration */}
               <div className="text-gray-400 text-sm mb-4">
-                <p>{intern.location}</p>
-                <p>{intern.duration}</p>
+                <p>{exp.duration}</p>
               </div>
 
-              {/* Achievements */}
+              {/* Contributions */}
               <ul className="list-disc pl-5 space-y-3 text-gray-300">
-                {intern.achievements.map((achievement, i) => (
-                  <li key={i}>{achievement}</li>
+                {exp.contributions.map((contribution, i) => (
+                  <li key={i}>{contribution}</li>
                 ))}
               </ul>
             </motion.div>
@@ -85,4 +80,4 @@ const InternshipSection = () => {
   );
 };
 
-export default InternshipSection;
+export default ExperienceSection;

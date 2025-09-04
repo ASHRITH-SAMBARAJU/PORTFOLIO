@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Brain, Activity, BarChart3 } from "lucide-react";
+import { Github, Brain, ShoppingCart, ShieldCheck, Home, Film, BarChart3 } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -17,47 +17,75 @@ const ProjectsSection = () => {
         "Grad-CAM",
         "Streamlit",
       ],
-      github: "https://github.com/Jahnavi-1999/AI-POWERED-BRAIN-TUMOR-DETECTION-AND-TREATMENT-RECOMMENDATION-SYSTEM",
+      github: "https://github.com/ASHRITH-SAMBARAJU/BRAIN-TUMOR-DETECTION",
       icon: Brain,
-      iconColor: "text-yellow-300", // Bright yellow for emphasis
+      iconColor: "text-blue-200",
       gradient: "from-blue-500 to-purple-600",
     },
     {
-      title: "Alzheimer's Disease Detection using Machine Learning",
+      title: "E-Commerce Web Application Using MERN Stack",
       description:
-        "AI-driven Alzheimer’s diagnosis tool using a custom CNN model. The system analyzes brain MRI scans to classify dementia stages, provides confidence scores, doctor-style recommendations, and generates downloadable reports—all through a privacy-compliant Streamlit interface.",
-      techStack: [
-        "TensorFlow",
-        "Keras",
-        "OpenCV",
-        "Pillow",
-        "NumPy",
-        "Pandas",
-        "Custom CNN",
-        "Streamlit",
-      ],
-      github: "https://github.com/Jahnavi-1999/Alzheimer-s-Disease-Detection-using-ML",
-      icon: Activity,
-      iconColor: "text-green-300", // Green for medical/monitoring theme
-      gradient: "from-purple-500 to-indigo-600",
+        "Developed a Full-stack online shopping platform with Product Listing, User Authentication, and Inventory Management & Cart Features. Built responsive interfaces with React, implemented REST APIs & managed data handling with MongoDB.",
+      techStack: ["React", "Node.js", "MongoDB", "Express", "Postman", "REST APIs"],
+      github: "https://github.com/ASHRITH-SAMBARAJU/E-COMMERCE-APPLICATION",
+      icon: ShoppingCart,
+      iconColor: "text-green-300",
+      gradient: "from-green-500 to-emerald-600",
     },
     {
-      title: "Performance Evaluation of Classifier Models Using R",
+      title: "Blockchain Based Academic Credentials Issuance",
       description:
-        "Developed and evaluated multiple machine learning classifier models in R, analyzing performance metrics to determine the most effective techniques for predictive tasks. Focused on data preprocessing, model training, and comparative evaluation.",
-      techStack: ["R", "Caret", "RandomForest", "ggplot2", "Data Preprocessing"],
-      github: "https://github.com/Jahnavi-1999/Performance-Evaluation-of-Classfier-Models-Using-R",
-      icon: BarChart3,
-      iconColor: "text-pink-300", // Pink for analytics & visualization
+        "Blockchain-based academic certificate platform with secure login and role-based dashboards for students, universities, and verifiers. Enables tamper-proof credential issuance and seamless verification using Ethers.js and Twilio OTP authentication.",
+      techStack: ["React", "Ethereum", "Ethers.js", "Solidity", "Tailwind CSS", "Twilio OTP"],
+      github:
+        "https://github.com/ASHRITH-SAMBARAJU/BLOCKCHAIN-BASED-ACADEMIC-CREDENTIALS-ISSUANCE",
+      icon: ShieldCheck,
+      iconColor: "text-red-300",
       gradient: "from-orange-500 to-red-600",
+    },
+    {
+      title: "MernGrove Interior Decor Application",
+      description:
+        "MernGrove is a full-stack e-commerce web application designed for interior decor shopping. It enables users to browse, favorite, and purchase home decor products through a modern, responsive, and engaging interface. Built with a focus on a smooth and intuitive frontend experience.",
+      techStack: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      github:
+        "https://github.com/ASHRITH-SAMBARAJU/MERNGROVE-INTERIOR-DECOR-APPLICATION",
+      icon: Home,
+      iconColor: "text-pink-300",
+      gradient: "from-pink-500 to-rose-600",
+    },
+    {
+      title: "ML Based - Movie Recommendation System",
+      description:
+        "Machine learning–based movie recommendation system using content-based and collaborative filtering. Uses NumPy, pandas, and scikit-learn for efficient data handling and recommendation logic. Trained on the MovieLens dataset sourced from Kaggle for generating personalized suggestions.",
+      techStack: ["Python", "Pandas", "Scikit-learn", "NumPy", "Matplotlib", "Seaborn"],
+      github: "https://github.com/ASHRITH-SAMBARAJU/MOVIE-RECOMMENDATION-PROJECT",
+      icon: Film,
+      iconColor: "text-blue-300",
+      gradient: "from-indigo-500 to-blue-600",
+    },
+    {
+      title: "ML Based - Iris Classification Project",
+      description:
+        "Supervised learning model for Iris flower classification using TensorFlow, scikit-learn, NumPy, and pandas. Trained on the Iris dataset with features like sepal and petal dimensions. Accurately classifies flowers into three species - Setosa, Versicolor, and Virginica using standard ML algorithms.",
+      techStack: ["Python", "Scikit-learn", "Matplotlib", "Pandas", "Seaborn", "NumPy"],
+      github: "https://github.com/ASHRITH-SAMBARAJU/IRIS-CLASSIFICATION-PROJECT",
+      icon: BarChart3,
+      iconColor: "text-yellow-300",
+      gradient: "from-yellow-500 to-amber-600",
     },
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-br from-black via-gray-900 to-black text-white">
+    <section
+      id="projects"
+      className="py-24 bg-gradient-to-br from-black via-gray-900 to-black text-white"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Featured Projects</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+            Featured Projects
+          </h2>
           <div className="h-1 w-24 bg-white mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             A showcase of my technical skills and creative problem-solving abilities
@@ -94,16 +122,13 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex pt-2">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
+
+                {/* Added margin for spacing above the button */}
+                <div className="pt-6">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Button
                       size="sm"
-                      className="w-full bg-black text-white hover:bg-gray-800 flex items-center justify-center gap-2 transition-all duration-300"
+                      className="w-full bg-black text-white hover:bg-gray-800 rounded-xl flex items-center justify-center gap-2"
                     >
                       <Github className="w-4 h-4" />
                       GitHub

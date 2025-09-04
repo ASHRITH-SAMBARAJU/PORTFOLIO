@@ -81,7 +81,7 @@ npm run dev
 
 ## Contact
 
-**Jahnavi Sambaraju**  
+**Ashrith Sambaraju**  
 Email: [ashrithsambaraju@gmail.com](mailto:ashrithsambaraju@gmail.com)  
 LinkedIn: [linkedin.com/in/ashrith-sambaraju](https://www.linkedin.com/in/ashrith-sambaraju)  
 

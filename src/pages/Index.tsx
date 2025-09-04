@@ -1,12 +1,11 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import PublicationsCertifications from "@/components/PublicationsCertifications";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
-import PublicationsCertifications from "@/components/PublicationsCertifications";
-import ProfExp from "@/components/ProfExp"; // ✅ Import your new Professional Experience section
 
 const Index = () => {
   return (
@@ -19,9 +18,9 @@ const Index = () => {
         <AboutSection />
       </section>
 
-      <section id="publications">
+      <section id="publications-certifications">
         <PublicationsCertifications />
-      </section>
+      </section>  
 
       <section id="projects">
         <ProjectsSection />
@@ -29,11 +28,6 @@ const Index = () => {
 
       <section id="skills">
         <SkillsSection />
-      </section>
-
-      {/* ✅ New Professional Experience section */}
-      <section id="profexp">
-        <ProfExp />
       </section>
 
       <section id="experience">
