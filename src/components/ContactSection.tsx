@@ -45,10 +45,11 @@ const ContactSection = () => {
           >
             <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
             <form
-              action="https://formspree.io/f/xjkogvbn"
-              method="POST"
-              className="space-y-6"
-            >
+            action="https://formspree.io/f/xqablgep"
+            method="POST"
+            className="space-y-6"
+          >
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="name">Full Name</Label>
