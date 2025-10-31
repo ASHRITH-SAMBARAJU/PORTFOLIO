@@ -2,10 +2,21 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    company: "Bharat Smart Services (Coral Innovations Pvt Ltd)",
+    role: "Data Science Intern",
+    duration: "September 2025 - Present",
+    logo: "/logos/bss_logo.png",
+    contributions: [
+      "Developing a Rule-Based Clustering Algorithm for Meter clustering based on their parameters coordinates using Python",
+      "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation. ",
+      ,
+    ],
+  },
+  {
     company: "NextGen Edunet Foundation X EY",
     role: "MERN Stack Intern",
     duration: "March 2025 - April 2025",
-    logo: "/logos/ey_logo.png",
+    logo: "/logos/ey_logo.png",     
     contributions: [
       "Built a dynamic e-commerce web application using the MERN stack",
       "Implemented user authentication and efficient product management",
