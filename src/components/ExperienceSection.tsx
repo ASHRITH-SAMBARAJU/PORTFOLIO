@@ -4,19 +4,18 @@ const experiences = [
   {
     company: "Bharat Smart Services (Coral Innovations Pvt Ltd)",
     role: "Data Science Intern",
-    duration: "September 2025 - Present",
+    duration: "September 2025 - October 2025",
     logo: "/logos/bss_logo.png",
     contributions: [
-      "Developing a Rule-Based Clustering Algorithm for Meter clustering based on their parameters coordinates using Python",
-      "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation. ",
-      ,
+      "Developed and automated data clustering and reporting workflows using AIML frameworks, boosting accuracy and efficiency.",
+      "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation."
     ],
   },
   {
     company: "NextGen Edunet Foundation X EY",
     role: "MERN Stack Intern",
     duration: "March 2025 - April 2025",
-    logo: "/logos/ey_logo.png",     
+    logo: "/logos/ey_logo.png",
     contributions: [
       "Built a dynamic e-commerce web application using the MERN stack",
       "Implemented user authentication and efficient product management",
@@ -40,13 +39,11 @@ const ExperienceSection = () => {
   return (
     <section className="py-28 bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold">Experience</h2>
           <div className="h-1 w-28 bg-white mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Experience Cards */}
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <motion.div
@@ -57,7 +54,6 @@ const ExperienceSection = () => {
               viewport={{ once: true }}
               className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              {/* Logo & Company Info */}
               <div className="flex items-center mb-6">
                 {exp.logo && (
                   <img
@@ -72,12 +68,10 @@ const ExperienceSection = () => {
                 </div>
               </div>
 
-              {/* Duration */}
               <div className="text-gray-400 text-sm mb-4">
                 <p>{exp.duration}</p>
               </div>
 
-              {/* Contributions */}
               <ul className="list-disc pl-5 space-y-3 text-gray-300">
                 {exp.contributions.map((contribution, i) => (
                   <li key={i}>{contribution}</li>
