@@ -4,10 +4,10 @@ const experiences = [
   {
     company: "Bharat Smart Services (Coral Innovations Pvt Ltd)",
     role: "Data Science Intern",
-    duration: "September 2025 - October 2025",
+    duration: "September 2025 - Present",
     logo: "/logos/bss_logo.png",
     contributions: [
-      "Developed and automated data clustering and reporting workflows using AIML frameworks, boosting accuracy and efficiency.",
+      "Developing an AI-driven clustering framework that integrates feature-based analytics with upcoming image-based modeling through YOLO and OpenCV to enhance meter recognition and automate classification accuracy.",
       "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation."
     ],
   },
