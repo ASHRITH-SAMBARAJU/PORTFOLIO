@@ -19,6 +19,7 @@ const HeroSection = () => {
 
       {/* White Container */}
       <div className="relative z-10 max-w-5xl w-full rounded-3xl bg-white text-black shadow-xl px-10 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
         {/* Profile Image */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -26,13 +27,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="flex justify-center"
         >
-          <div className="bg-[#111827] p-2 rounded-full shadow-xl">
-            <img
-              src="/profile.jpg"
-              alt="Ashrith Sambaraju"
-              className="w-72 h-72 md:w-[18rem] md:h-[18rem] object-cover object-center rounded-full"
-            />
-          </div>
+        <div className="p-[4px] rounded-full bg-gradient-to-tr from-gray-900 via-gray-700 to-gray-900 shadow-xl">
+        <img
+          src="/profile.png"
+          alt="Ashrith Sambaraju"
+          className="w-72 h-72 md:w-[18rem] md:h-[18rem] object-cover object-center rounded-full"
+        />
+      </div>
+
+
         </motion.div>
 
         {/* Text Content */}
@@ -90,7 +93,7 @@ const HeroSection = () => {
             wrapper="h2"
             className="text-xl sm:text-2xl md:text-3xl !text-black font-semibold tracking-wide"
             repeat={Infinity}
-            speed={50} // makes letters appear one by one
+            speed={50}
           />
 
           <p className="text-sm text-black tracking-wider uppercase font-semibold">
@@ -106,6 +109,7 @@ const HeroSection = () => {
               <Eye className="w-5 h-5" />
               View Projects
             </Button>
+
             <Button
               onClick={scrollToResume}
               className="bg-[#111827] text-white border border-[#111827] hover:bg-white hover:text-[#111827] transition duration-300 px-6 py-3 text-md font-semibold rounded-full shadow-md hover:shadow-xl flex items-center gap-2"
