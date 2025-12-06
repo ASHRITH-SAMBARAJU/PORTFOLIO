@@ -8,7 +8,8 @@ const experiences = [
     logo: "/logos/bss_logo.png",
     contributions: [
       "Developing an AI-driven clustering framework that integrates feature-based analytics with upcoming image-based modeling through YOLO and OpenCV to enhance meter recognition and automate classification accuracy.",
-      "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation."
+      "Developed an AI-driven electricity theft detection system using 5-second smart-meter data, combining hybrid anomaly modeling, spike/dip event analytics, and NILM-style appliance pattern estimation. Built a full end-to-end pipeline with Isolation Forest, LSTM Autoencoder, rule-based cue extraction, and an interactive Streamlit dashboard for real-time monitoring, alerts, and forensic analysis.",
+      "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation.",
     ],
   },
   {
@@ -69,7 +70,7 @@ const ExperienceSection = () => {
               </div>
 
               <div className="text-gray-400 text-sm mb-4">
-                <p>{exp.duration}</p>
+                <p>{exp.duration}</p>  
               </div>
 
               <ul className="list-disc pl-5 space-y-3 text-gray-300">
