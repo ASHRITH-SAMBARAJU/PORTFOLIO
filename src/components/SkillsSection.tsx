@@ -12,7 +12,7 @@ import {
 const skillCategories = [
   {
     title: "AIML Frameworks & Libraries",
-    skills: ["NumPy", "Pandas", "Matplotlib", "OpenCV"],
+    skills: ["NumPy", "Pandas", "Matplotlib", "OpenCV","SKlearn", "YOLO", "PyTorch"],
     icon: Layers,
     color: "from-amber-500 to-orange-600",
   },
