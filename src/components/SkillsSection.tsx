@@ -24,7 +24,7 @@ const skillCategories = [
   },
   {
     title: "Database & Data Storage",
-    skills: ["MySQL", "MongoDB"],
+    skills: ["SQL (Oracle)", "MongoDB"],
     icon: Database,
     color: "from-fuchsia-500 to-purple-600",
   },
