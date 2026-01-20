@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     company: "Bharat Smart Services (Coral Innovations Pvt Ltd)",
-    role: "Data Science Intern",
+    role: "AI Engineer Intern",
     duration: "September 2025 - Present",
     logo: "/logos/bss_logo.png",
     contributions: [
