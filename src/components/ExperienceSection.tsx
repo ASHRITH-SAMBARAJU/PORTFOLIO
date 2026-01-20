@@ -7,13 +7,14 @@ const experiences = [
     duration: "September 2025 - Present",
     logo: "/logos/bss_logo.png",
     contributions: [
-      "Developing an AI-driven clustering framework that integrates feature-based analytics with upcoming image-based modeling through YOLO and OpenCV to enhance meter recognition and automate classification accuracy.",
-      "Developed an AI-driven electricity theft detection system using 5-second smart-meter data, combining hybrid anomaly modeling, spike/dip event analytics, and NILM-style appliance pattern estimation. Built a full end-to-end pipeline with Isolation Forest, LSTM Autoencoder, rule-based cue extraction, and an interactive Streamlit dashboard for real-time monitoring, alerts, and forensic analysis.",
-      "Built a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation.",
-    ],
+      "Designing an AI-driven clustering framework that integrates feature-based analytics with upcoming image-based modeling through YOLO and OpenCV to enhance meter recognition and automate classification accuracy.",
+      "Built Transformer Sentinel, an AI-based predictive maintenance system for power transformers (Hack-AP, PS-3), designed for Andhra Pradesh DISCOM scenarios, achieving ~86% prediction accuracy with XGBoost, supported by a custom THI engine, SHAP explainability, and FastAPI-Streamlit delivery.",
+      "Developed an AI-driven electricity theft detection system using 5-second smart-meter data, combining hybrid anomaly modeling, spike/dip event analytics,achieving ~81% detection accuracy. Built a full end-to-end pipeline with Isolation Forest, LSTM Autoencoder, rule-based cue extraction, and an interactive Streamlit dashboard for real-time monitoring, alerts, and forensic analysis.",
+      "Implemented a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation.",
+    ],  
   },
-  {
-    company: "NextGen Edunet Foundation X EY",
+  { 
+    company: "NextGen Edunet Foundation X EY",          
     role: "MERN Stack Intern",
     duration: "March 2025 - April 2025",
     logo: "/logos/ey_logo.png",
