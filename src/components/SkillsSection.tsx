@@ -5,6 +5,7 @@ import {
   Database,         // DB
   MonitorSmartphone,// IDEs & Tools
   LayoutGrid,       // Frontend
+  Cloud,            // Cloud
   Smile,            // Soft Skills
 } from "lucide-react";
 
@@ -33,6 +34,12 @@ const skillCategories = [
     skills: ["Visual Studio", "Jupyter", "Google Colab"],
     icon: MonitorSmartphone,
     color: "from-emerald-500 to-teal-600",
+  },
+  {
+    title: "Cloud Technologies",
+    skills: ["AWS (Lambda, ECR, API Gateway)", "Docker"],
+    icon: Cloud,
+    color: "from-indigo-500 to-blue-600",
   },
   {
     title: "Frontend Development",
