@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: "Bharat Smart Services (Coral Innovations Pvt Ltd)",
-    role: "AIML Engineer Intern",
+    company: "Bharat Smart Services",
+    role: "AI & ML Engineer",
     duration: "September 2025 - Present",
     logo: "/logos/bss_logo.png",
     contributions: [
       "Engineered a production-grade OCR pipeline for automated electricity bill extraction using Google Cloud Vision, deterministic parsing, and containerized AWS Lambda, supporting all DISCOMs and multiple bill formats across Telangana with 91% extraction accuracy. Built an insights engine for tariff classification, electricity consumption analysis, yearly loss estimation, and consumer savings forecasting.",
-      "Architected an end-to-end smart meter classification system using PyTorch (ResNet-18), OpenCV-based quality checks, and a Streamlit dashboard, then deployed it on AWS Lambda with Docker and ECR for low-latency automated top-3 predictions.",
+      "Architected and deployed an end-to-end smart meter classification system for major DISCOMs (TPDDL, TPCODL, and KESCO), training a PyTorch ResNet-18 model on close to 100 classes of meters to achieve 92% accuracy. Integrated OpenCV-based image quality filters (darkness/glare/blur detection) and designed a Streamlit dashboard, hosting the pipeline on AWS Lambda via Docker and ECR for low-latency automated top-3 predictions.",
       "Built Transformer Sentinel, an AI-based predictive maintenance system for power transformers (Hack-AP, PS-3), designed for Andhra Pradesh DISCOM scenarios, achieving 86% prediction accuracy with XGBoost, supported by a custom THI engine, SHAP explainability, and FastAPI-Streamlit delivery.",
       "Developed an AI-driven electricity theft detection system using 5-second smart-meter data, combining hybrid anomaly modelling and spike/dip event analytics, achieving 83% detection accuracy. Built a full end-to-end pipeline with Isolation Forest, LSTM Autoencoder, rule-based cue extraction, and an interactive Streamlit dashboard for real-time monitoring, alerts, and forensic analysis.",
       "Implemented a Streamlit-based data management dashboard with MongoDB GridFS for storing meter records, image handling, and automated PDF report generation.",
